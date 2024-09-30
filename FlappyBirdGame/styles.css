@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Exo 2', system-ui;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+    background: linear-gradient(to bottom, #4bc0c8, #c779d0, #feac5e);
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 600px;
+    background-color: #f1f1f1;
+    border: 5px solid #000;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    perspective: 1000px;
+}
+
+/* Update the bird to use an image */
+.bird {
+    position: absolute;
+    left: 50px;
+    top: 250px;
+    width: 40px;
+    height: 40px;
+    background-image: url('bird.png'); /* Use your bird image here */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+    transition: transform 0.1s ease;
+}
+
+.pipes-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.pipe {
+    position: absolute;
+    width: 50px;
+    background-color: green;
+    border: 2px solid #333;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.pipe-top {
+    height: 200px;
+    top: 0;
+}
+
+.pipe-bottom {
+    height: 200px;
+    bottom: 0;
+}
+
+.score {
+    position: absolute;
+    top: 8%;
+    left: 45%;
+    font-size: 35px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.game-over {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    color: red;
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    .game-container {
+        max-width: 100%;
+    }
+
+    .bird {
+        width: 30px;
+        height: 30px;
+    }
+
+    .pipe {
+        width: 30px;
+    }
+}

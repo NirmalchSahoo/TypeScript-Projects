@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Exo 2', system-ui;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .game-info {
+    margin-bottom: 20px;
+  }
+  
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+    margin: 0 auto;
+    perspective: 1000px; /* 3D perspective */
+  }
+  
+  .tile {
+    width: 100px;
+    height: 100px;
+    background-color: #eee;
+    color: #333;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    transform: rotateX(20deg) rotateY(10deg); /* 3D effect */
+  }
+  
+  .tile[data-value='2'] { background-color: #f0e68c; }
+  .tile[data-value='4'] { background-color: #f4a460; }
+  .tile[data-value='8'] { background-color: #ffa07a; }
+  .tile[data-value='16'] { background-color: #ff7f50; }
+  .tile[data-value='32'] { background-color: #ff6347; }
+  .tile[data-value='64'] { background-color: #ff4500; }
+  .tile[data-value='128'] { background-color: #f0e68c; }
+  .tile[data-value='256'] { background-color: #ffd700; }
+  .tile[data-value='512'] { background-color: #daa520; }
+  .tile[data-value='1024'] { background-color: #b8860b; }
+  .tile[data-value='2048'] { background-color: #8b4513; color: white; }
+  
+  @media (max-width: 768px) {
+    .game-board {
+      grid-template-columns: repeat(4, 70px);
+    }
+  
+    .tile {
+      width: 70px;
+      height: 70px;
+      font-size: 1.5rem;
+      line-height: 70px;
+    }
+  }

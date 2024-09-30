@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    font-family: 'Exo 2', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}/* General body styles */
+body {
+    
+    background: #441f567b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 3D container for the converter */
+.container {
+    background: linear-gradient(145deg, #c7c5c5, #d0cece);
+    border-radius: 12px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15), -5px -5px 15px rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Converter form styles */
+.converter {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+/* 3D effect for inputs and selects */
+input, select {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.7);
+    background: #f0f0f0;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for input and select */
+input:focus, select:focus {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2), -5px -5px 15px rgba(255, 255, 255, 0.7);
+    outline: none;
+}
+
+/* 3D effect for buttons */
+button {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.1em;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2), -5px -5px 15px rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+}
+
+/* Hover effect for buttons */
+button:hover {
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.15), inset -5px -5px 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Convert button styles */
+.convert-button {
+    background: linear-gradient(145deg, #1a73e8, #1a50e0);
+    color: #fff;
+}
+
+/* Reverse button styles */
+.reverse-button {
+    background: linear-gradient(145deg, #ffb300, #ff8800);
+    width: 100px;
+    margin: 0 auto -29px auto;
+    color: #fff;
+}
+
+/* Hover effects for specific buttons */
+.convert-button:hover {
+    background: linear-gradient(145deg, #305a96, #1a8c8c);
+}
+
+.reverse-button:hover {
+    background: linear-gradient(145deg, #b51a53, #cc7a00);
+}
+
+/* 3D result section */
+#result {
+    text-align: center;
+    font-size: 1.4em;
+    margin-top: 20px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15), -5px -5px 15px rgba(255, 255, 255, 0.7);
+}

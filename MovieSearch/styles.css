@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Exo 2', system-ui;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1b1b1b;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items at the top */
+  min-height: 100vh; /* Set minimum height for full view */
+  overflow-y: auto; /* Allow vertical scroll when content overflows */
+}
+
+.container {
+  text-align: center;
+  padding: 20px; /* Add padding to prevent edge collision */
+  max-width: 1200px; /* Limit the width of content */
+  margin: 0 auto; /* Center the container */
+}
+
+h1 {
+  color: #f5a623;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.search-box {
+  margin: 20px 0;
+}
+
+#search-input {
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  width: 250px;
+  font-size: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+#search-btn {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border: none;
+  background-color: #f5a623;
+  color: #1b1b1b;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#search-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+.movie-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%; /* Ensure grid takes full width */
+}
+
+.movie-card {
+  background-color: #333;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  perspective: 1000px;
+  width: 100%; /* Make sure movie cards fill the grid space */
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: rotateY(10deg) rotateX(-5deg) scale(1.05);
+}
+
+.movie-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.movie-details {
+  margin-top: 15px;
+}
+
+.movie-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #f5a623;
+}
+
+.movie-plot {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.movie-rating {
+  margin-top: 10px;
+  color: #f5a623;
+}
+
+/* Modal styling */
+.movie-modal {
+  display: none;
+  position: fixed; /* Fixed positioning to keep it in the center even on scroll */
+  z-index: 1000; /* Ensures it's above all other content */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto; /* Allow scrolling inside the modal if content exceeds the viewport height */
+}
+
+.modal-content {
+  background-color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 90%; /* Make the modal responsive */
+  max-width: 600px; /* Set a maximum width for large screens */
+  color: white;
+  position: relative; /* Ensure close button stays inside modal */
+}
+
+.close-btn {
+  position: absolute; /* Position close button inside the modal */
+  right: 20px;
+  top: 10px;
+  color: #f5a623;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #ffcc00;
+}
+
+.modal-content h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.modal-content img {
+  max-width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+/* Loader styling */
+.loader {
+    display: none; /* Hidden initially */
+    border: 8px solid transparent;
+    border-radius: 50%;
+    border-top: 8px solid #ff5733;  /* Color 1 */
+    border-right: 8px solid #33ff57;  /* Color 2 */
+    border-bottom: 8px solid #3357ff;  /* Color 3 */
+    border-left: 8px solid #ff33a5;  /* Color 4 */
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite, colorshift 4s ease infinite;
+    margin: 50px auto;
+  }
+  
+  /* 3D spin animation */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Shift the colors over 4 seconds */
+  @keyframes colorshift {
+    0% {
+      border-top: 8px solid #ff5733;
+      border-right: 8px solid #33ff57;
+      border-bottom: 8px solid #3357ff;
+      border-left: 8px solid #ff33a5;
+    }
+    25% {
+      border-top: 8px solid #33ff57;
+      border-right: 8px solid #3357ff;
+      border-bottom: 8px solid #ff33a5;
+      border-left: 8px solid #ff5733;
+    }
+    50% {
+      border-top: 8px solid #3357ff;
+      border-right: 8px solid #ff33a5;
+      border-bottom: 8px solid #ff5733;
+      border-left: 8px solid #33ff57;
+    }
+    75% {
+      border-top: 8px solid #ff33a5;
+      border-right: 8px solid #ff5733;
+      border-bottom: 8px solid #33ff57;
+      border-left: 8px solid #3357ff;
+    }
+    100% {
+      border-top: 8px solid #ff5733;
+      border-right: 8px solid #33ff57;
+      border-bottom: 8px solid #3357ff;
+      border-left: 8px solid #ff33a5;
+    }
+  }
+  
+
+  

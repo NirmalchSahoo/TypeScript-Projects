@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Hangman Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hangman Game</h1>
+        <canvas id="hangmanCanvas"></canvas>
+        <div id="wordContainer"></div>
+        <div class="input-container">
+            <input type="text" id="letterInput" maxlength="1" placeholder="Enter a letter">
+            <button id="guessBtn">Guess</button>
+        </div>
+        <p id="message"></p>
+        <button id="restartBtn" style="display: none;">Restart</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

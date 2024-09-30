@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Basic reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Exo 2', system-ui;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #f06, #ff9);
+  overflow: hidden; /* Prevents scrollbars from showing during fireworks */
+}
+
+.game-container {
+  perspective: 1000px;
+  position: relative;
+  z-index: 1;
+}
+
+.game-box {
+  width: 500px;
+  /* height: 250px; */
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transform-style: preserve-3d;
+  transform: rotateX(10deg) rotateY(10deg);
+  transition: transform 0.5s, box-shadow 0.5s;
+  position: relative;
+}
+
+.game-box:hover {
+  transform: rotateX(0deg) rotateY(0deg);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.game-box:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 20% 20%,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0)
+  );
+  border-radius: 10px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #078d7b;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 0, 0, 0.3),
+    0 0 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  margin-left: 70px;
+  transition: transform 0.3s, text-shadow 0.3s;
+  position: relative;
+  z-index: 2;
+}
+
+h1:hover {
+  transform: translateY(-10px);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 0, 0, 0.4),
+    0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+input[type='number'] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+  position: relative;
+  z-index: 2;
+}
+
+button#guessButton {
+  background: #28a745;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+button#guessButton:hover {
+  background: #218838;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+button#restartButton {
+  background: #007bff;
+  color: #fff;
+}
+
+button#restartButton:hover {
+  background: #0056b3;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+p {
+  margin-top: 10px;
+  font-size: 1.1em;
+  position: relative;
+  z-index: 2;
+}
+
+.hidden {
+  display: none;
+}
+
+#fireworksCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+}

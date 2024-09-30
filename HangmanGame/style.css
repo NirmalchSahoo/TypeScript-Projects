@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Exo 2', system-ui;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transform: perspective(1000px) rotateY(10deg);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #4b6cb7;
+}
+
+canvas {
+  background: #fff;
+  display: block;
+  margin: 20px auto;
+  border: 2px solid #4b6cb7;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.input-container {
+  margin: 20px 0;
+}
+
+input,
+button {
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin: 10px;
+}
+
+button {
+  background-color: #4b6cb7;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #182848;
+}
+
+#wordContainer {
+  font-size: 2rem;
+  letter-spacing: 10px;
+  margin: 20px 0;
+}
+
+#message {
+  font-size: 1.5rem;
+  color: red;
+}

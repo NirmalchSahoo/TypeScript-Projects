@@ -1,0 +1,113 @@
+/* Add this to center the calculator */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* 100% of the viewport height */
+    margin: 0;      /* Remove any default body margin */
+    background-color: ; /* Optional: Add a background color for contrast */
+  }
+  
+  #calculator {
+    width: 320px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #333;  /* Add background color to the calculator */
+    padding: 20px;           /* Optional: Add padding to the calculator */
+    border-radius: 10px;     /* Optional: Rounded corners for the calculator */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+  }
+  
+  #display {
+    background-color: #333;
+    color: white;
+    text-align: right;
+    padding: 20px;
+    font-size: 24px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  #buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  /* Buttons style */
+  button {
+    padding: 20px;
+    font-size: 18px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #666;
+  }
+  
+  button:active {
+    background-color: #777;
+  }
+  
+  /* Individual operator colors */
+  button[data-value="+"] {
+    background-color: #96e930; /* Red */
+  }
+  button[data-value="+"]:hover{
+    background-color: #b7ff90;
+  }
+  
+  button[data-value="-"] {
+    background-color: #f39c12; /* Orange */
+  }
+  button[data-value="-"]:hover {
+    background-color: #ffd490; 
+  }
+  
+  button[data-value="*"] {
+    background-color: #9b59b6; /* Purple */
+  }
+  button[data-value="*"]:hover {
+    background-color: #df8fff; 
+  }
+  
+  button[data-value="/"] {
+    background-color: #3498db; /* Blue */
+  }
+  button[data-value="/"]:hover {
+    background-color: #8fd2ff; 
+  }
+  
+  button[data-value="="] {
+    background-color: #1bc763; /* Green */
+  }
+  button[data-value="="]:hover {
+    background-color: #85ffb8; 
+  }
+  
+  /* Special styling for C and DEL buttons */
+  button[data-value="clear"],
+  button[data-value="delete"] {
+    grid-column: span 2; /* Each button takes 2 columns */
+  }
+  
+  button[data-value="delete"]:hover {
+    background-color: #ff968a;
+  }
+  button[data-value="clear"]:hover {
+    background-color: #fdd089;
+  }
+  
+  button[data-value="delete"] {
+    background-color: #e74c3c; /* Red for clear */
+  }
+  
+  button[data-value="clear"] {
+    background-color: #f39c12; /* Orange for delete */
+  }

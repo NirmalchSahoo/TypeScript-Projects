@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="weather-card">
+            <h1>Weather App</h1>
+            <div class="weather-info">
+                <p id="location">Detecting location...</p>
+                <i class="icon fas fa-map-marker-alt location-icon"></i>
+            </div>
+            <div class="weather-info">
+                <p id="temperature"></p>
+                <i class="icon fas fa-thermometer-half temp-icon"></i>
+            </div>
+            <div class="weather-info">
+                <p id="description">Description</p>
+                <i id="desc-icon" class="icon fas"></i>
+            </div>
+            <div class="weather-info">
+                <p id="humidity"></p>
+                <i class="icon fas fa-tachometer-alt humidity-icon"></i>
+            </div>
+            <div class="weather-info">
+                <p id="wind"></p>
+                <i class="icon fas fa-wind wind-icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js" type="module"></script>
+</body>
+</html>

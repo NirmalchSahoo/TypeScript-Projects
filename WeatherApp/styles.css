@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Exo 2', system-ui;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Center container on the page */
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(145deg, #a8c0ff, #3f2b96);
+}
+
+/* Weather Card styling */
+.weather-card {
+  background: #f0f0f3;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  text-align: center; /* Center-align text and icons */
+  width: 300px;
+  position: relative; /* For absolute positioning of icons */
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center-align items horizontally */
+}
+
+/* 3D Hover Effect */
+.weather-card:hover {
+  transform: perspective(600px) rotateY(15deg) rotateX(10deg);
+}
+
+/* Text Styling */
+h1 {
+  font-size: 2rem;
+  color: #3f2b96;
+  margin-bottom: 20px;
+}
+
+/* Weather Info Styling */
+.weather-info {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+/* Icon Styling */
+.icon {
+  font-size: 2rem;
+  color: #333;
+  margin-left: 10px; /* Space between text and icon */
+  transition: transform 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+/* 3D Icon Colors */
+.location-icon {
+  color: #3f2b96; /* Dark blue */
+}
+
+.temp-icon {
+  color: red; /* Red */
+}
+
+.desc-icon {
+  color: #ffbb33; /* Orange */
+}
+
+/* Weather Icon Styles */
+.icon.desc-icon.cloudy {
+  color: #ffbb33; /* Color for cloudy */
+}
+
+.icon.desc-icon.clear {
+  color: #00aaff; /* Color for clear */
+}
+
+.icon.desc-icon.rain {
+  color: #1e90ff; /* Color for rain */
+}
+
+.icon.desc-icon.drizzle {
+  color: #00ced1; /* Color for drizzle */
+}
+
+.icon.desc-icon.mist {
+  color: #b0e0e6; /* Color for mist */
+}
+
+.icon.desc-icon.haze {
+  color: #f0e68c; /* Color for haze */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .weather-card {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .weather-info p {
+    font-size: 1rem;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+  }
+}

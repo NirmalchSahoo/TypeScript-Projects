@@ -1,0 +1,157 @@
+/* styles.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0e0e0, #f5f5f5);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15), inset 0 -4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 70%; /* Full width */
+    max-width: 700px; /* Max width for larger screens */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Add space between form elements */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #b0b0b0;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+button {
+    background: linear-gradient(145deg, #007bff, #0056b3);
+    color: #ffffff;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #0056b3, #003d80);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+li {
+    background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+canvas {
+    display: block;
+    margin: 20px auto;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%; /* Adjust width for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Adjust width for smaller tablets and larger phones */
+    }
+
+    h1 {
+        font-size: 24px; /* Adjust heading size */
+    }
+
+    input[type="text"], input[type="number"], select {
+        font-size: 14px; /* Adjust input font size */
+    }
+
+    button {
+        font-size: 16px; /* Adjust button font size */
+        padding: 12px 18px; /* Adjust button padding */
+    }
+
+    li {
+        font-size: 14px; /* Adjust list item font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%; /* Full width for mobile devices */
+    }
+
+    h1 {
+        font-size: 20px; /* Further adjust heading size */
+    }
+
+    input[type="text"], input[type="number"], select {
+        font-size: 12px; /* Further adjust input font size */
+    }
+
+    button {
+        font-size: 14px; /* Further adjust button font size */
+        padding: 10px 14px; /* Further adjust button padding */
+    }
+
+    li {
+        font-size: 12px; /* Further adjust list item font size */
+    }
+}
